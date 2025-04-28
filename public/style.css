@@ -539,3 +539,21 @@ body {
     text-align: center;
   }
 }
+
+.footer-center {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer-privacy-link {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer-privacy-link:hover {
+  color: var(--color-accent);
+}
