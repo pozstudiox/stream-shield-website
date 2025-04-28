@@ -12,7 +12,20 @@
   <nav class="navbar">
     <div class="container">
       <a href="index.html" class="logo">
-        <img src="icons/streamshield-icon.svg" class="logo-img" alt="Logo" />
+        <svg class="logo-img" width="32" height="32" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="grad1" x1="0.5" y1="0" x2="0.5" y2="1">
+              <stop offset="0%" stop-color="#58a6ff"/>
+              <stop offset="100%" stop-color="#1f6feb"/>
+            </linearGradient>
+          </defs>
+          <path d="M64 8 L24 32 L24 80 C24 102 44 120 64 120 C84 120 104 102 104 80 L104 32 Z"
+                fill="url(#grad1)" stroke="#fff" stroke-width="4"/>
+          <polygon points="54,48 90,64 54,80" fill="#fff"/>
+          <circle cx="64" cy="64" r="42" fill="none" stroke="#ff5555" stroke-width="8"/>
+          <line x1="38" y1="38" x2="90" y2="90"
+                stroke="#ff5555" stroke-width="8" stroke-linecap="round"/>
+        </svg>
         <span class="logo-text">StreamShield</span>
       </a>
       <ul class="menu">
