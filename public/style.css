@@ -546,10 +546,8 @@ body {
 }
 
 .footer-privacy-link {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.95rem;
   color: var(--color-muted);
+  font-size: 0.95rem;
   text-decoration: none;
   transition: color var(--transition);
 }
@@ -557,3 +555,4 @@ body {
 .footer-privacy-link:hover {
   color: var(--color-accent);
 }
+
