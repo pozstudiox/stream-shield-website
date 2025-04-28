@@ -526,17 +526,77 @@ body {
     padding: 24px;
   }
 
-  .privacy-page h2 {
-    font-size: 1.8rem;
-  }
+  /* GİZLİLİK SAYFASI */
+.privacy-page {
+  background: var(--color-surface-alt);
+  padding: 80px 20px;
+  min-height: 100vh;
+}
 
-  .privacy-page h3 {
-    font-size: 1.1rem;
-  }
+.privacy-page .container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 50px 40px;
+  box-shadow: var(--shadow);
+}
 
-  .btn-back {
-    width: 100%;
-    text-align: center;
+.privacy-logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--color-accent);
+  margin-bottom: 4px;
+}
+
+.privacy-nav {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: var(--color-accent-hover);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.privacy-nav:hover {
+  text-decoration: underline;
+}
+
+.privacy-section {
+  margin-bottom: 32px;
+}
+
+.privacy-section h2,
+.privacy-section h3 {
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.privacy-section p {
+  color: var(--color-text);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.btn-back {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 22px;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius);
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-back:hover {
+  background: var(--color-accent-hover);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .privacy-page .container {
+    padding: 30px 20px;
   }
 }
 
