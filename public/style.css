@@ -457,3 +457,85 @@ body {
   background: var(--color-accent);
   color: #fff;
 }
+
+/* GİZLİLİK POLİTİKASI SAYFASI */
+.privacy-page {
+  background: var(--color-surface-alt);
+  padding: 80px 20px;
+  min-height: 100vh;
+}
+
+.privacy-page .container {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 40px;
+  box-shadow: var(--shadow);
+}
+
+.privacy-page h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+.privacy-page h3 {
+  margin-top: 36px;
+  font-size: 1.3rem;
+  color: var(--color-accent-hover);
+}
+
+.privacy-page p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: var(--color-muted);
+}
+
+.privacy-page a {
+  color: var(--color-accent);
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.privacy-page a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+.btn-back {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 24px;
+  background: var(--color-accent);
+  color: white;
+  font-weight: bold;
+  border-radius: var(--radius);
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-back:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .privacy-page .container {
+    padding: 24px;
+  }
+
+  .privacy-page h2 {
+    font-size: 1.8rem;
+  }
+
+  .privacy-page h3 {
+    font-size: 1.1rem;
+  }
+
+  .btn-back {
+    width: 100%;
+    text-align: center;
+  }
+}
