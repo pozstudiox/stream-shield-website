@@ -1,24 +1,28 @@
 const express = require('express');
-const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
-// E-posta ayarları
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'pozstudiosh@gmail.com',
-    pass: 'UYGULAMA_ŞİFRENİ_BURAYA_YAZ' // Gmail uygulama şifresi kullanmalısın
-  }
+// ➡ Ana sayfa (/) isteğini karşıla
+app.get('/', (req, res) => {
+  res.send('StreamShield Server Çalışıyor!');
 });
 
-// Geri bildirim endpointi
+// ➡ Uninstall sonrası geri bildirim isteğini karşıla
 app.post('/send-feedback', async (req, res) => {
   const { code } = req.body;
   if (!code) return res.status(400).send('Code missing');
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'pozstudiosh@gmail.com',
+      pass: 'GMAIL_APP_PASSWORD'  // Gerçek Gmail uygulama şifresi buraya
+    }
+  });
 
   const mailOptions = {
     from: 'StreamShield <pozstudiosh@gmail.com>',
@@ -44,5 +48,5 @@ app.post('/send-feedback', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
+  console.log(`Server ${PORT} portunda çalışıyor.`);
 });
