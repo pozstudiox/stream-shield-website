@@ -1,17 +1,23 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
-// ➡ Ana sayfa (/) isteğini karşıla
+// 📁 Public klasörünü açıyoruz
+app.use(express.static(path.join(__dirname, 'public')));
+
+// ➡ Ana sayfa isteği index.html'yi göstersin
 app.get('/', (req, res) => {
-  res.send('StreamShield Server Çalışıyor!');
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// ➡ Uninstall sonrası geri bildirim isteğini karşıla
+// ➡ uninstall.html için zaten public klasör açık olduğu için ekstra bir şey yapmaya gerek yok
+
+// ➡ Geri bildirim API'si
 app.post('/send-feedback', async (req, res) => {
   const { code } = req.body;
   if (!code) return res.status(400).send('Code missing');
@@ -20,7 +26,7 @@ app.post('/send-feedback', async (req, res) => {
     service: 'gmail',
     auth: {
       user: 'pozstudiosh@gmail.com',
-      pass: 'GMAIL_APP_PASSWORD'  // Gerçek Gmail uygulama şifresi buraya
+      pass: 'GMAIL_APP_PASSWORD'
     }
   });
 
@@ -50,3 +56,4 @@ app.post('/send-feedback', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server ${PORT} portunda çalışıyor.`);
 });
+
