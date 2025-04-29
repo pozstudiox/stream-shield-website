@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StreamShield Kaldırıldı</title>
+  <link rel="stylesheet" href="uninstall.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="icons/streamshield128.png" alt="StreamShield Logo" class="logo" />
+    <h1>Uygulamayı Kaldırdınız</h1>
+    <p>StreamShield’i kaldırdığınız için üzüldük. Neden kaldırdığınızı kısaca yazabilir misiniz?</p>
+    <form id="feedback-form">
+      <textarea id="feedback" placeholder="Geri bildiriminiz..." required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+    <p class="thanks hidden">Geri bildiriminiz için teşekkürler!</p>
+  </div>
+  <script>
+    document.getElementById('feedback-form').addEventListener('submit', e => {
+      e.preventDefault();
+      // TODO: buraya local veya remote bir endpoint ekleyebilirsiniz
+      console.log('Kaldırma sebebi:', document.getElementById('feedback').value);
+      document.getElementById('feedback-form').classList.add('hidden');
+      document.querySelector('.thanks').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

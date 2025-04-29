@@ -1,0 +1,81 @@
+/* uninstall.css */
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap');
+
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --accent: #58a6ff;
+  --text: #e6edf3;
+  --radius: 8px;
+  --transition: 0.3s;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  background: var(--surface);
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.logo {
+  width: 64px;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+form { display: flex; flex-direction: column; gap: 12px; }
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+  padding: 8px;
+  border: none;
+  border-radius: var(--radius);
+  background: #21252b;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+button {
+  padding: 10px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+button:hover {
+  background: #1f6feb;
+}
+
+.thanks {
+  margin-top: 16px;
+  font-size: 1rem;
+}
+.hidden { display: none; }
