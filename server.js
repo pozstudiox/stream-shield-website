@@ -26,7 +26,7 @@ app.post('/send-feedback', async (req, res) => {
     service: 'gmail',
     auth: {
       user: 'pozstudiosh@gmail.com',
-      pass: 'GMAIL_APP_PASSWORD'
+      pass: 'atyq ypva disv hfcb' // işte buraya yapıştırdığın şifre
     }
   });
 
